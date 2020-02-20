@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Application {
@@ -8,10 +10,14 @@ public class Application {
         Student cindy = new Student("Cindy", 19);
         Student mary = new Student("Mary", 18);
 
-        Map<String, Integer> stuMap = new HashMap<>();
-        stuMap.put(linda.getName(), linda.getAge());
-        stuMap.put(cindy.getName(), mary.getAge());
-        stuMap.put(mary.getName(), mary.getAge());
+        Map<Integer, List<Student>> stuMap = new HashMap<>();
+        List<Student> ageEighteen = new ArrayList<>();
+        List<Student> ageNineteen = new ArrayList<>();
+        ageEighteen.add(linda);
+        ageEighteen.add(mary);
+        ageNineteen.add(cindy);
+        stuMap.put(18, ageEighteen);
+        stuMap.put(19, ageNineteen);
 
         Teacher teacher = new Teacher("Bob", stuMap);
         teacher.addStudent(new Student("Ben", 19));

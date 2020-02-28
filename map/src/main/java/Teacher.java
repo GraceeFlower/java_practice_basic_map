@@ -21,11 +21,11 @@ public class Teacher {
         this.name = name;
     }
 
-    public Map<Integer, List<Student>> getStuMap() {
+    public Map<Integer, List<Student>> getGroupedStudents() {
         return stuMap;
     }
 
-    public void setStuMap(Map<Integer, List<Student>> stuMap) {
+    public void setGroupedStudents(Map<Integer, List<Student>> stuMap) {
         this.stuMap = stuMap;
     }
 

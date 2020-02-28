@@ -10,16 +10,16 @@ public class Application {
         Student cindy = new Student("Cindy", 19);
         Student mary = new Student("Mary", 18);
 
-        Map<Integer, List<Student>> stuMap = new HashMap<>();
+        Map<Integer, List<Student>> groupedStudents = new HashMap<>();
         List<Student> ageEighteen = new ArrayList<>();
         List<Student> ageNineteen = new ArrayList<>();
         ageEighteen.add(linda);
         ageEighteen.add(mary);
         ageNineteen.add(cindy);
-        stuMap.put(18, ageEighteen);
-        stuMap.put(19, ageNineteen);
+        groupedStudents.put(18, ageEighteen);
+        groupedStudents.put(19, ageNineteen);
 
-        Teacher teacher = new Teacher("Bob", stuMap);
+        Teacher teacher = new Teacher("Bob", groupedStudents);
         teacher.addStudent(new Student("Ben", 19));
         teacher.addStudent(new Student("Solider", 20));
 
